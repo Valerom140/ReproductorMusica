@@ -22,10 +22,10 @@ let contenedor = document.getElementById('track/list')
 axios.get('https://api.institutoalfa.org/api/songs').then((res) => {
     console.log(res.data.songs)
 
-    res.data.songs.map(() =>{
+    res.data.songs.map(() => {
         let div = document.createElement('div')
         div.setAttribute('class', 'Cancion')
-        
+
         div.innerHTML = `
         <img src="/imges/image (4).png" alt="">
                 <h2>Enamorado Tuyo</h2>
@@ -36,5 +36,20 @@ axios.get('https://api.institutoalfa.org/api/songs').then((res) => {
                 </ul>
             </section>
             `
+
+        div.addEventListener("click", () => {
+
+            document.getElementById("")
+
+            document.getElementById("audio").setAttribute("src",'https://api.institutoalfa.org/api/songs/songs/${song.audio.filename}')
+            
+        })
+
+        contenedor.appendChild(div)
     })
 })
+
+
+
+
+
