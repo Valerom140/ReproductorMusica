@@ -49,6 +49,17 @@ axios.get('https://api.institutoalfa.org/api/songs').then((res) => {
     })
 })
 
+let audio = document.getElementById('audio')
+
+document.getElementById('play').addEventListener('click',() => {
+
+if (audio.paused) {
+    audio.play()
+} else {
+    audio.pause()
+}
+
+})
 
 
 
